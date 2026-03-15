@@ -19,4 +19,11 @@ int main()
     meter *= 3.2808;
 
     cout << "Die Laenge in Fuss lautet: " << meter << endl;
+
+    cout << "Bitte geben Sie die Geldmenge in Euro ein: ? ";
+    double euro; cin >> euro;
+
+    euro *= 1.2957;
+
+    cout << "Die Geldmenge in US Dollar lautet: " << euro << endl;
 }
