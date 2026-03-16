@@ -3,27 +3,28 @@ using namespace std;
 
 int main()
 {
-    cout << "Bitte geben Sie die Temperatur in Grad Celsius ein: ? ";
-    double temp; cin >> temp;
 
-    temp = (temp * 1.8) + 32;
+    double input;
+    int auswahl;
 
-    cout << "Die Temperatur in Fahrenheit lautet: " << temp;
+    cout << "Ihre Eingabe: ? ";cin >> input; cout << endl;
+    cout << "Ihre Auswalh der Umwandlung: " << endl;
+    cout << "1 - Celsius in Fahrenheit " << endl;
+    cout << "2 - Meter in Fuss " << endl;
+    cout << "3 - Euro in US Dollar " << endl;
+    cout << "Antwort: "; cin >> auswahl;
 
-    cout << endl;
 
 
-    cout << "Bitte geben Sie die Laenge in Metern ein: ? ";
-    double meter; cin >> meter;
+    double temp,meter,euro;
+    temp = ((input * 1.8) + 32) * (auswahl - 2) * (auswahl - 3)/2;
+    meter = input * 3.2808 * (auswahl - 1) * (auswahl - 3) *-1;
+    euro = (input * 1.2957) * (auswahl - 2) * (auswahl - 1) /2;
 
-    meter *= 3.2808;
+    double output = temp + meter + euro;
 
-    cout << "Die Laenge in Fuss lautet: " << meter << endl;
+    cout << "Output: " << output;
 
-    cout << "Bitte geben Sie die Geldmenge in Euro ein: ? ";
-    double euro; cin >> euro;
+    return 0;
 
-    euro *= 1.2957;
-
-    cout << "Die Geldmenge in US Dollar lautet: " << euro << endl;
 }
