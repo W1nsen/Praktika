@@ -25,6 +25,13 @@ int main()
 
     cout << "Output: " << output;
 
-    return 0;
 
+    cout << endl;
+
+    cout << "Bitte geben Sie den Buchstaben ein: ? ";
+    char c; cin >> c;cout<<endl;
+
+    cout << "Der Buchstabe " << c << " hat die Position " << int(c) - 96 << " im Alphabet " << endl;
+
+    return 0;
 }
